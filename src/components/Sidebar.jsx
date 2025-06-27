@@ -13,7 +13,7 @@ function Sidebar() {
             <li>
             Personal Details
             <Icon path={mdiChevronDown} size={1.8} className="arrowDown" />
-            <div class="hidden">
+            <div class="  personFormElement">
             <PersonalInput />
             </div>
             </li>
