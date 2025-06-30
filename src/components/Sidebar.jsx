@@ -9,25 +9,25 @@ function Sidebar() {
 
     return (
         <>
-        <ul class="curriculumList">
-            <li>
+        <ul className="curriculumList">
+            <li id="open">
             Personal Details
             <Icon path={mdiChevronDown} size={1.8} className="arrowDown" />
-            <div class="  personFormElement">
+            <div className="  personFormElement">
             <PersonalInput />
             </div>
             </li>
-            <li>
+            <li >
             Educational Details
             <Icon path={mdiChevronDown} size={1.8} className="arrowDown" />
-            <div class="hidden">
+            <div className="hidden">
             <EducationInput />
             </div>
             </li>
             <li>
             Practical Details
             <Icon path={mdiChevronDown} size={1.8} className="arrowDown" />
-            <div class="hidden">
+            <div className="hidden">
             <ExperienceInput />
             </div>
             </li>

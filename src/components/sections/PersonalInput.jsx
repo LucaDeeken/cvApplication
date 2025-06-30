@@ -1,3 +1,8 @@
+import TextInput from "../inputFields/TextInput";
+import NumInput from "../inputFields/NumInput";
+import MailInput from "../inputFields/MailInput";
+import DateInput from "../inputFields/DateInput";
+
 
 function PersonalInput() {
 
@@ -6,10 +11,15 @@ function PersonalInput() {
         <section>
             <form className="formPersonal">
                 <fieldset className="fieldsetPersonal">
-                    <label htmlFor="nameInput">First Name: </label>
-                    <input type="text" id="nameInput" placeholder="John..." />
-                    <label htmlFor="nameInput">Last Name: </label>
-                    <input type="text" id="nameInput" placeholder="John..." />
+                    <TextInput
+
+                    />
+                    <MailInput
+
+                    />
+                    <NumInput
+
+                    />
                 </fieldset>
             </form>
         </section>

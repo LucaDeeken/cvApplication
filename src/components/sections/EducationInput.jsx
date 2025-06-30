@@ -3,7 +3,7 @@ function EducationInput() {
 
     return (
         <>
-        <section>
+        <section className="hidden">
             <form className="formPersonal">
                 <fieldset>
                     <label htmlFor="nameInput"></label>
