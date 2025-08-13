@@ -1,11 +1,11 @@
+import PersonalOutput from "./sections/PersonalOutput";
 
-function CVArea() {
-
-    return (
-        <>
-        
-        </>
-    )
+function CVArea({fullName}) {
+  return (
+    <>
+      <PersonalOutput fullName= {fullName} />
+    </>
+  );
 }
 
 export default CVArea;

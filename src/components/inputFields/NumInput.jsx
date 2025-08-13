@@ -1,13 +1,12 @@
-function NumInput() {
-
-    return (
-      <>
-        <div className="inputContainer">
-          <label htmlFor="numInput">Full Name: </label>
-          <input type="number" id="numberInput" placeholder="0160 12345" />
-        </div>
-      </>
-    )
-  }
+function NumInput({ labelNum, placeHolder }) {
+  return (
+    <>
+      <div className="inputContainer">
+        <label htmlFor="numInput">{labelNum} </label>
+        <input type="number" id="numberInput" placeholder={placeHolder} />
+      </div>
+    </>
+  );
+}
 
 export default NumInput;

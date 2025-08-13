@@ -1,9 +1,5 @@
 function SelectInput() {
-
-    return (
-      <>
-      </>
-    )
-  }
+  return <></>;
+}
 
 export default SelectInput;

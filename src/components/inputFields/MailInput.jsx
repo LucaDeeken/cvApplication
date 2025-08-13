@@ -1,13 +1,12 @@
-function MailInput() {
-
-    return (
-      <>
-        <div className="inputContainer">
-          <label htmlFor="mailInput">E-Mail: </label>
-          <input type="email" id="mailInput" placeholder="John@aol.com" />
-        </div>
-      </>
-    )
-  }
+function MailInput({ labelMail, placeHolder }) {
+  return (
+    <>
+      <div className="inputContainer">
+        <label htmlFor="mailInput">{labelMail} </label>
+        <input type="email" id="mailInput" placeholder={placeHolder} />
+      </div>
+    </>
+  );
+}
 
 export default MailInput;
