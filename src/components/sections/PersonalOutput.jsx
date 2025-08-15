@@ -1,5 +1,7 @@
 import Icon from '@mdi/react';
 import { mdiDeleteCircleOutline } from '@mdi/js';
+import { mdiEmail } from '@mdi/js';
+import { mdiPhone } from '@mdi/js';
 
 function PersonalOutput( {fullName,birthDate, mail, mobilNum, setEducationObjectList, setPracticalObjectList, setFullName, setBirthDate, setMail, setMobil}) {
 
@@ -20,10 +22,22 @@ function PersonalOutput( {fullName,birthDate, mail, mobilNum, setEducationObject
     className="deleteIcon"
     onClick= {() => deleteCV()}
     />
-      <div className="fullName">{fullName}</div>
+      <div className="fullName">{fullName}
+      <Icon
+    path={mdiEmail}
+    size={1}
+    className="telephonIcon"
+    />
+      </div>
       <div className="birthDate">{birthDate}</div>
       <div className="mailNum">{mail}</div>
-      <div className="telNum">{mobilNum}</div>
+      <div className="telNum">{mobilNum}
+      <Icon
+    path={mdiPhone}
+    size={1}
+    className="phoneIcon"
+    />
+      </div>
       </div>
   );
 }
