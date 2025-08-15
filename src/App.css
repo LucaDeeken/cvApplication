@@ -206,8 +206,8 @@ transition: filter 0.15s ease; /* smooth effect */
 
 .telephonIcon {
   position: absolute;
-  bottom: 18px;
-  left: 38px;
+  top: 0;
+  left: -30px;
 }
 
 .birthDate {
@@ -226,6 +226,7 @@ transition: filter 0.15s ease; /* smooth effect */
   justify-self: center;
   font-size: 1rem;
   font-weight: 600;
+  margin-left: 45px;
 }
 
 .telNum {
@@ -234,6 +235,7 @@ transition: filter 0.15s ease; /* smooth effect */
   justify-self: center;
   font-size: 1rem;
   font-weight: 600;
+  margin-left: 35px;
   position: relative;
 }
 
@@ -374,6 +376,7 @@ textarea {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.4fr 0.1fr 1fr;
+    height: 100%;
   }
 
   .curriculumList li {
@@ -415,12 +418,14 @@ textarea {
 @media (max-width: 730px) {
   .CVArea {
     width: 100%;
+    height: 100%;
   }
 }
 
 @media (max-width: 540px) {
   .CVArea {
     width: 100%;
+    height: 100%;
   }
 
   .curriculumList li {

@@ -22,15 +22,15 @@ function PersonalOutput( {fullName,birthDate, mail, mobilNum, setEducationObject
     className="deleteIcon"
     onClick= {() => deleteCV()}
     />
-      <div className="fullName">{fullName}
+      <div className="fullName">{fullName}</div>
+      <div className="birthDate">{birthDate}</div>
+      <div className="mailNum">{mail}
       <Icon
     path={mdiEmail}
     size={1}
     className="telephonIcon"
     />
       </div>
-      <div className="birthDate">{birthDate}</div>
-      <div className="mailNum">{mail}</div>
       <div className="telNum">{mobilNum}
       <Icon
     path={mdiPhone}
