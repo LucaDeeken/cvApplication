@@ -6,14 +6,14 @@ function EducationOutput( {formEducation}) {
       <div className="educationOutput">
         <div className="degreeSchool">
         <p>{formEducation.degree}</p>
-        <p>-</p>
+        <p>&nbsp;—&nbsp;</p>
         <p>{formEducation.school}</p>
         </div>
         <div className="location">
         <p>{formEducation.city}, {formEducation.country}</p>
         </div>
         <div className="fromUntil">
-        <p>{formEducation.from}—{formEducation.until}</p>
+        <p>{formEducation.from} — {formEducation.until}</p>
         </div>
         </div>
     );
