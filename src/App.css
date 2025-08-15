@@ -144,9 +144,11 @@ body {
 .educationalOutputSection h1, .practicalOutputSection h1 {
 
   font-size: 1.4rem;
+  font-weight: 500;
   margin: 3rem;
   margin-top: 2rem;
   margin-left: 3rem;
+  color: rgb(149, 147, 147);
 }
 
 .educationalOutputSection ul, .practicalOutputSection ul {
