@@ -5,7 +5,7 @@ import Icon from "@mdi/react";
 import { mdiChevronDown } from "@mdi/js";
 import { useState } from "react";
 
-function Sidebar( {setName, fullName}) {
+function Sidebar( {setName, fullName, setDate, setMobile, setMail, birthDate, mailAdress, mobilNumber, setEducationForm }) {
   const [openAreaPersonal, setOpenAreaPersonal] = useState("");
   const [openAreaEducational, setOpenAreaEducational] = useState("");
   const [openAreaPractical, setOpenAreaPractical] = useState("");
@@ -34,7 +34,7 @@ function Sidebar( {setName, fullName}) {
               openAreaPersonal === "open" ? "personFormElement" : "hidden"
             }
           >
-            <PersonalInput setName= {setName} fullName= {fullName} />
+            <PersonalInput setName= {setName} setDate= {setDate} setMobile= {setMobile} setMail = {setMail} fullName= {fullName} birthDate= {birthDate} mailAdress= {mailAdress} mobilNumber= {mobilNumber} />
           </div>
         </li>
         <li
@@ -53,7 +53,7 @@ function Sidebar( {setName, fullName}) {
               openAreaEducational === "open" ? "personFormElement" : "hidden"
             }
           >
-            <EducationInput />
+            <EducationInput setEducationForm = {setEducationForm}  />
           </div>
         </li>
         <li id={openAreaPractical === "open" ? "open" : ""} class="practicalLi">

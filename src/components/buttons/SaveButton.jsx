@@ -1,9 +1,8 @@
-import { useState } from "react";
 
 function SaveButton() {
   return (
-    <button className="saveBtn" onClick={() => saveData(section)}>
-      Save
+    <button className="saveBtn" type="submit">
+      Add!
     </button>
   );
 }
