@@ -157,6 +157,14 @@ body {
 
 }
 
+li {
+  padding: 5px;
+}
+li:hover {
+  background-color: var(--color-yellow);
+  border-radius: 6px;
+  cursor: pointer;
+}
 .educationListEle, .practicalListEle {
   margin-bottom: 1rem;
 }

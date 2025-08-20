@@ -6,10 +6,43 @@ import { useState } from "react";
 
 function App() {
 
+
+ 
+
+  const [openAreaPersonal, setOpenAreaPersonal] = useState("");
+  const [openAreaEducational, setOpenAreaEducational] = useState("");
+  const [openAreaPractical, setOpenAreaPractical] = useState("");
+
+  const toggleSection = (section) => {
+    
+    if (section === "personal") {
+      setOpenAreaPersonal(openAreaPersonal === "open" ? "" : "open");
+    } else if (section === "educational") {
+      setOpenAreaEducational(openAreaEducational === "open" ? "" : "open");
+    } else {
+      setOpenAreaPractical(openAreaPractical === "open" ? "" : "open");
+    }
+  };
+
   const [fullName, setFullName] = useState("John Doe");
   const [birthDate, setBirthDate] = useState("1995-08-10");
   const [mailAdress, setMailAdress] = useState("john.doe@example.com");
   const [mobilNumber, setMobilNumber] = useState("1 555 123 4567");
+  const [educationInputValue, setEducationInputValue] = useState({
+    degree: "",
+    school: "",
+    city: "",
+    country: "",
+    from: null,
+    until: null
+  })
+
+  function getEducationalCvOutputToInputFields(id) {
+    const form = queryID(id);
+    setEducationInputValue((prevList) => [...prevList, form]);
+  }
+
+  
   const [educationObjectList, setEducationObjectList] = useState([
     {
       degree: "Master of Science in Software Engineering",
@@ -80,13 +113,31 @@ function App() {
 
   }
 
+  function queryID(id) {
+
+    console.log(educationObjectList);
+    const form = educationObjectList.find(item => item.id=== id);
+    console.log(form);
+    toggleSection("educational");
+    return form
+  }
+
+  function queryIDPractical(id) {
+
+    console.log(practicalObjectList);
+    const form = practicalObjectList.find(item => item.id=== id);
+    console.log(form);
+    toggleSection("practical");
+    return form
+  }
+
   return (
     <>
       <aside className="sideBar">
-        <Sidebar setName= {setName} setDate= {setDate} setMobile= {setMobil} setMail = {setMail} fullName= {fullName} birthDate= {birthDate} mailAdress = {mailAdress} mobilNumber= {mobilNumber} setEducationForm = {funcSetEducationForm} setPracticalForm = {funcSetPracticalForm} />
+        <Sidebar toggleSection= {toggleSection} openAreaPersonal= {openAreaPersonal} setOpenAreaPersonal= {setOpenAreaPersonal} openAreaEducational= {openAreaEducational} setOpenAreaEducational= {setOpenAreaEducational}  openAreaPractical= {openAreaPractical} setOpenAreaPractical= {setOpenAreaPractical} setName= {setName} setDate= {setDate} setMobil= {setMobil} setMail = {setMail} fullName= {fullName} birthDate= {birthDate} mailAdress = {mailAdress} mobilNumber= {mobilNumber} setEducationForm = {funcSetEducationForm} setPracticalForm = {funcSetPracticalForm} educationInputValue= {educationInputValue} />
       </aside>
       <main className="CVArea">
-        <CVArea setEducationObjectList= {setEducationObjectList} setPracticalObjectList= {setPracticalObjectList} setFullName= {setFullName} setBirthDate = {setBirthDate} setMail = {setMailAdress} setMobil = {setMobilNumber}   fullName = {fullName} birthDate = {birthDate} mail = {mailAdress} mobilNum = {mobilNumber} educationObjectList= {educationObjectList} practicalObjectList= {practicalObjectList} />
+        <CVArea toggleSection= {toggleSection}  setPracticalObjectList= {setPracticalObjectList} setFullName= {setFullName} setBirthDate = {setBirthDate} setMail = {setMailAdress} setMobil = {setMobilNumber}   fullName = {fullName} birthDate = {birthDate} mail = {mailAdress} mobilNum = {mobilNumber} educationObjectList= {educationObjectList} practicalObjectList= {practicalObjectList} queryID= {queryID} queryIDPractical = {getEducationalCvOutputToInputFields} setEducationInputValue = {setEducationInputValue} />
       </main>
     </>
   );

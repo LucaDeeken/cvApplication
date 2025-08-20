@@ -3,7 +3,7 @@ import TextInput from "../inputFields/TextInput";
 import SaveButton from "../buttons/SaveButton";
 import { useRef } from "react";
 
-function EducationInput({setEducationForm }) {
+function EducationInput({setEducationForm, educationInputValue, setEducationInputValue }) {
   const formRef = useRef();
 
   function handleSubmit(e) {

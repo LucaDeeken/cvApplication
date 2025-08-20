@@ -1,13 +1,9 @@
-function DateInput({ labelDate, value, setDate, name }) {
+function DateInput({ labelDate, value, setDate, name, onChange }) {
   return (
     <>
       <div className="inputContainer">
         <label htmlFor="dateInput">{labelDate}</label>
-        <input type="date" id="dateInput" name = {name} value= {value} onChange= {(e) => {
-          if (typeof setDate === "function") {
-            setDate(e.target.value)
-          }
-        } } />
+        <input type="date" id="dateInput" name = {name} value= {value} onChange= {onChange}/>
       </div>
     </>
   );

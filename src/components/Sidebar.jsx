@@ -5,23 +5,12 @@ import Icon from "@mdi/react";
 import { mdiChevronDown } from "@mdi/js";
 import { useState } from "react";
 
-function Sidebar( {setName, fullName, setDate, setMobile, setMail, birthDate, mailAdress, mobilNumber, setEducationForm, setPracticalForm }) {
-  const [openAreaPersonal, setOpenAreaPersonal] = useState("");
-  const [openAreaEducational, setOpenAreaEducational] = useState("");
-  const [openAreaPractical, setOpenAreaPractical] = useState("");
-  const toggleSection = (section) => {
-    if (section === "personal") {
-      setOpenAreaPersonal(openAreaPersonal === "open" ? "" : "open");
-    } else if (section === "educational") {
-      setOpenAreaEducational(openAreaEducational === "open" ? "" : "open");
-    } else {
-      setOpenAreaPractical(openAreaPractical === "open" ? "" : "open");
-    }
-  };
+function Sidebar( {setName, fullName, setDate, setMobil, setMail, birthDate, mailAdress, mobilNumber, setEducationForm, setPracticalForm, toggleSection, openAreaPersonal, setOpenAreaPersonal, openAreaEducational, setOpenAreaEducational, openAreaPractical, setOpenAreaPractical, educationInputValue, setEducationInputValue   }) {
+  
   return (
     <>
       <ul className="curriculumList">
-        <li id={openAreaPersonal === "open" ? "open" : ""} class="personalLi">
+        <li id={openAreaPersonal === "open" ? "open" : ""} className="personalLi">
           Personal Details
           <Icon
             path={mdiChevronDown}
@@ -34,12 +23,12 @@ function Sidebar( {setName, fullName, setDate, setMobile, setMail, birthDate, ma
               openAreaPersonal === "open" ? "personFormElement" : "hidden"
             }
           >
-            <PersonalInput setName= {setName} setDate= {setDate} setMobile= {setMobile} setMail = {setMail} fullName= {fullName} birthDate= {birthDate} mailAdress= {mailAdress} mobilNumber= {mobilNumber} />
+            <PersonalInput setName= {setName} setDate= {setDate} setMobil= {setMobil} setMail = {setMail} fullName= {fullName} birthDate= {birthDate} mailAdress= {mailAdress} mobilNumber= {mobilNumber} />
           </div>
         </li>
         <li
           id={openAreaEducational === "open" ? "open" : ""}
-          class="educationalLi"
+          className="educationalLi"
         >
           Educational Details
           <Icon
@@ -53,7 +42,7 @@ function Sidebar( {setName, fullName, setDate, setMobile, setMail, birthDate, ma
               openAreaEducational === "open" ? "personFormElement" : "hidden"
             }
           >
-            <EducationInput setEducationForm = {setEducationForm}  />
+            <EducationInput setEducationForm = {setEducationForm} educationInputValue= {educationInputValue} setEducationInputValue= {setEducationInputValue} />
           </div>
         </li>
         <li id={openAreaPractical === "open" ? "open" : ""} class="practicalLi">

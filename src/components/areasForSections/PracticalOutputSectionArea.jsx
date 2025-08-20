@@ -1,7 +1,7 @@
 
 import PracticalOutput from "../sections/PracticalOutput";
 
-function PracticalOutputSection( {practicalObjectList} ) {
+function PracticalOutputSection( {practicalObjectList, queryIDPractical} ) {
 
     
     return(
@@ -10,8 +10,8 @@ function PracticalOutputSection( {practicalObjectList} ) {
         <h1>PRACTICAL</h1>
         <ul>
             {practicalObjectList.map((object) => (
-              <li key={object.id} className="practicalListEle">
-                <PracticalOutput formPractical = {object} setPracticalObjectList= {practicalObjectList} />
+              <li key={object.id} className="practicalListEle" onClick={()=> queryIDPractical(object.id)}>
+                <PracticalOutput formPractical = {object} />
               </li>  
             ))}
         </ul>
