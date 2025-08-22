@@ -4,7 +4,7 @@ import PracticalInput from "./sections/PracticalInput";
 import Icon from "@mdi/react";
 import { mdiChevronDown } from "@mdi/js";
 
-function Sidebar( {practicalInputValue, updatePracticalState, updatePracticalList, practicalEditBtnDisabled, educationalEditBtnDisabled, updateEducationList, setName, fullName, setDate, setMobil, setMail, birthDate, mailAdress, mobilNumber, setEducationForm, setPracticalForm, toggleSection, openAreaPersonal, openAreaEducational, openAreaPractical, educationInputValue, setEducationInputValue, updateEducationState, educationEditBtn, practicalEditBtn   }) {
+function Sidebar( {practicalInputValue, updatePracticalState, updatePracticalList, practicalEditBtnDisabled, educationalEditBtnDisabled, updateEducationList, setName, fullName, setDate, setMobil, setMail, birthDate, mailAdress, mobilNumber, setEducationForm, setPracticalForm, toggleSection, openAreaPersonal, setOpenAreaPersonal, openAreaEducational, setOpenAreaEducational, openAreaPractical, setOpenAreaPractical, educationInputValue, setEducationInputValue, updateEducationState, educationEditBtn, practicalEditBtn   }) {
   
   return (
     <>

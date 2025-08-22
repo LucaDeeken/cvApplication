@@ -23,6 +23,14 @@ function App() {
     } else if (section === "educational") {
       if (openAreaEducational === "open") {
         setOpenAreaEducational("");
+        setEducationInputValue({
+          degree: "",
+          school: "",
+          city: "",
+          country: "",
+          from: "",
+          until: ""
+        });
       } else {
         setOpenAreaEducational("open");
         setEducationEditBtn("btnDisabled");
@@ -30,6 +38,14 @@ function App() {
     } else {
       if (openAreaPractical === "open") {
         setOpenAreaPractical("");
+        setPracticalInputValue({
+          jobTitle: "",
+          company: "",
+          from: null,
+          until: null,
+          activities: "",
+          id: ""
+        })
       } else {
         setOpenAreaPractical("open");
         setEducationEditBtn("btnDisabled");
@@ -229,7 +245,7 @@ function App() {
   return (
     <>
       <aside className="sideBar">
-        <Sidebar practicalInputValue= {practicalInputValue} updatePracticalList= {updatePracticalList} practicalEditBtnDisabled= {practicalEditBtnDisabled} educationalEditBtnDisabled= {educationalEditBtnDisabled} updateEducationList= {updateEducationList} toggleSection= {toggleSection} openAreaPersonal= {openAreaPersonal} openAreaEducational= {openAreaEducational}  openAreaPractical= {openAreaPractical} setName= {setName} setDate= {setDate} setMobil= {setMobil} setMail = {setMail} fullName= {fullName} birthDate= {birthDate} mailAdress = {mailAdress} mobilNumber= {mobilNumber} setEducationForm = {funcSetEducationForm} setPracticalForm = {funcSetPracticalForm} educationInputValue= {educationInputValue} updateEducationState = {updateEducationState} updatePracticalState= {updatePracticalState} educationEditBtn = {educationEditBtn} practicalEditBtn= {practicalEditBtn} />
+        <Sidebar practicalInputValue= {practicalInputValue} updatePracticalList= {updatePracticalList} practicalEditBtnDisabled= {practicalEditBtnDisabled} educationalEditBtnDisabled= {educationalEditBtnDisabled} updateEducationList= {updateEducationList} toggleSection= {toggleSection} openAreaPersonal= {openAreaPersonal} setOpenAreaPersonal= {setOpenAreaPersonal} openAreaEducational= {openAreaEducational} setOpenAreaEducational= {setOpenAreaEducational}  openAreaPractical= {openAreaPractical} setOpenAreaPractical= {setOpenAreaPractical} setName= {setName} setDate= {setDate} setMobil= {setMobil} setMail = {setMail} fullName= {fullName} birthDate= {birthDate} mailAdress = {mailAdress} mobilNumber= {mobilNumber} setEducationForm = {funcSetEducationForm} setPracticalForm = {funcSetPracticalForm} educationInputValue= {educationInputValue} updateEducationState = {updateEducationState} updatePracticalState= {updatePracticalState} educationEditBtn = {educationEditBtn} practicalEditBtn= {practicalEditBtn} />
       </aside>
       <main className="CVArea">
         <CVArea setEducationObjectList= {setEducationObjectList} setEducationEditBtn= {setEducationEditBtn} toggleEdit= {toggleEdit} toggleSection= {toggleSection}  setPracticalObjectList= {setPracticalObjectList} setFullName= {setFullName} setBirthDate = {setBirthDate} setMail = {setMailAdress} setMobil = {setMobilNumber}   fullName = {fullName} birthDate = {birthDate} mail = {mailAdress} mobilNum = {mobilNumber} educationObjectList= {educationObjectList} practicalObjectList= {practicalObjectList} queryID= {queryID} queryIDPractical = {queryIDPractical} setEducationInputValue = {setEducationInputValue} updateEducationState = {updateEducationState} />
