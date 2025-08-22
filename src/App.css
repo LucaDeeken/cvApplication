@@ -178,7 +178,7 @@ li:hover {
 .location, .activities {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 2px;
   font-size: 0.9rem;
   font-weight: 200;
   margin-top: 0.1rem;
@@ -187,7 +187,7 @@ li:hover {
 .fromUntil {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 1px;
   font-size: 0.75rem;
   font-weight: 700;
   margin-top: 0.1rem;
@@ -284,16 +284,16 @@ transition: filter 0.15s ease; /* smooth effect */
   height: clamp(380px, 40vh, 370px);
 }
 #open.educationalLi {
-  height: clamp(555px, 56vh, 505px);
+  height: clamp(570px, 56vh, 505px);
 }
 #open.practicalLi {
-  height: clamp(570px, 50vh, 435px);
+  height: clamp(590px, 50vh, 435px);
 }
 
 
 .arrowDown {
   position: absolute;
-  left: 80%;
+  left: 88%;
 }
 
 .arrowDown:hover {
@@ -338,13 +338,20 @@ textarea {
   padding: 0.3vh 0;
 }
 
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-right: 18px;
+  margin-top: 8px;
+}
+
 .saveBtn {
   display: flex;
   height: 40px;
   width: 80px;
-  justify-self: center;
+  justify-self: end;
   align-self: baseline;
-  margin-top: 15px;
   place-content: center;
   flex-wrap: wrap;
   font-size: 1.05rem;
@@ -352,11 +359,37 @@ textarea {
   border: 2px solid black;
 }
 
-.saveBtn:hover {
+.saveBtn:hover, .editBtn:hover {
   background-color: black;
   color: white;
   border: 2px solid white;
 }
+
+.editBtn {
+  display: flex;
+  color: black;
+  height: 40px;
+  width: 80px;
+  justify-self: start;
+  align-self: baseline;
+  place-content: center;
+  flex-wrap: wrap;
+  font-size: 1.05rem;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.btnDisabled {
+  background-color: rgb(213, 211, 211);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnDisabled:hover {
+  background-color: rgb(211, 209, 209);
+  cursor: not-allowed;
+}
+
 
 @media (max-width: 1155px) {
   #root {
@@ -397,7 +430,7 @@ textarea {
 
   .arrowDown {
     position: absolute;
-    left: 84%;
+    left: 91%;
   }
 
   fieldset {

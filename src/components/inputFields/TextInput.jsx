@@ -1,4 +1,4 @@
-function TextInput({ labelText, placeHolder, setName, value, name, onChange }) {
+function TextInput({ labelText, placeHolder, value, name, onChange }) {
   return (
     <>
       <div className="inputContainer">

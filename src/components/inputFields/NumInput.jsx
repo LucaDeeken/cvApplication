@@ -1,4 +1,4 @@
-function NumInput({ labelNum, placeHolder, value, setNum, onChange }) {
+function NumInput({ labelNum, placeHolder, value, onChange }) {
   return (
     <>
       <div className="inputContainer">

@@ -1,7 +1,7 @@
 
 import EducationOutput from "../sections/EducationOutput";
 
-function EducationOutputSection( {educationObjectList, queryID} ) {
+function EducationOutputSection( {educationObjectList, queryID, updateEducationState, toggleEdit} ) {
 
     
     return(

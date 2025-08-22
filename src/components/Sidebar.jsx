@@ -1,11 +1,10 @@
 import PersonalInput from "./sections/PersonalInput";
 import EducationInput from "./sections/EducationInput";
-import ExperienceInput from "./sections/PracticalInput";
+import PracticalInput from "./sections/PracticalInput";
 import Icon from "@mdi/react";
 import { mdiChevronDown } from "@mdi/js";
-import { useState } from "react";
 
-function Sidebar( {setName, fullName, setDate, setMobil, setMail, birthDate, mailAdress, mobilNumber, setEducationForm, setPracticalForm, toggleSection, openAreaPersonal, setOpenAreaPersonal, openAreaEducational, setOpenAreaEducational, openAreaPractical, setOpenAreaPractical, educationInputValue, setEducationInputValue   }) {
+function Sidebar( {practicalInputValue, updatePracticalState, updatePracticalList, practicalEditBtnDisabled, educationalEditBtnDisabled, updateEducationList, setName, fullName, setDate, setMobil, setMail, birthDate, mailAdress, mobilNumber, setEducationForm, setPracticalForm, toggleSection, openAreaPersonal, openAreaEducational, openAreaPractical, educationInputValue, setEducationInputValue, updateEducationState, educationEditBtn, practicalEditBtn   }) {
   
   return (
     <>
@@ -42,7 +41,7 @@ function Sidebar( {setName, fullName, setDate, setMobil, setMail, birthDate, mai
               openAreaEducational === "open" ? "personFormElement" : "hidden"
             }
           >
-            <EducationInput setEducationForm = {setEducationForm} educationInputValue= {educationInputValue} setEducationInputValue= {setEducationInputValue} />
+            <EducationInput educationalEditBtnDisabled= {educationalEditBtnDisabled} updateEducationList= {updateEducationList} setEducationForm = {setEducationForm} educationInputValue= {educationInputValue} setEducationInputValue= {setEducationInputValue} updateEducationState= {updateEducationState} educationEditBtn= {educationEditBtn} />
           </div>
         </li>
         <li id={openAreaPractical === "open" ? "open" : ""} class="practicalLi">
@@ -58,7 +57,7 @@ function Sidebar( {setName, fullName, setDate, setMobil, setMail, birthDate, mai
               openAreaPractical === "open" ? "personFormElement" : "hidden"
             }
           >
-            <ExperienceInput setPracticalObjectList = {setPracticalForm} />
+            <PracticalInput practicalInputValue= {practicalInputValue} updatePracticalState= {updatePracticalState} updatePracticalList= {updatePracticalList} practicalEditBtnDisabled= {practicalEditBtnDisabled} setPracticalObjectList = {setPracticalForm} practicalEditBtn= {practicalEditBtn} />
           </div>
         </li>
       </ul>

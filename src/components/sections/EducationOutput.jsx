@@ -5,15 +5,19 @@ function EducationOutput( {formEducation}) {
     return (
       <div className="educationOutput">
         <div className="degreeSchool">
-        <p>{formEducation.degree}</p>
+        <p className="educationOutput">{formEducation.degree}</p>
         <p>&nbsp;—&nbsp;</p>
-        <p>{formEducation.school}</p>
+        <p educationOutput>{formEducation.school}</p>
         </div>
         <div className="location">
-        <p>{formEducation.city}, {formEducation.country}</p>
+        <p educationOutput>{formEducation.city}</p>
+        <p>,</p>
+        <p educationOutput>{formEducation.country}</p>
         </div>
         <div className="fromUntil">
-        <p>{formEducation.from} — {formEducation.until}</p>
+        <p educationOutput>{formEducation.from}</p>
+        <p>&nbsp;—&nbsp;</p>
+        <p educationOutput>{formEducation.until}</p>
         </div>
         </div>
     );

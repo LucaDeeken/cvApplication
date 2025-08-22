@@ -1,7 +1,7 @@
 
 import PracticalOutput from "../sections/PracticalOutput";
 
-function PracticalOutputSection( {practicalObjectList, queryIDPractical} ) {
+function PracticalOutputSection( {practicalObjectList, queryIDPractical, practicalEditBtnDisabled} ) {
 
     
     return(

@@ -1,4 +1,4 @@
-function DateInput({ labelDate, value, setDate, name, onChange }) {
+function DateInput({ labelDate, value, name, onChange }) {
   return (
     <>
       <div className="inputContainer">

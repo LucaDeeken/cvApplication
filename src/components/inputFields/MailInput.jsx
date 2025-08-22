@@ -1,4 +1,4 @@
-function MailInput({ labelMail, placeHolder, value, setMail, onChange }) {
+function MailInput({ labelMail, placeHolder, value, onChange }) {
   return (
     <>
       <div className="inputContainer">
