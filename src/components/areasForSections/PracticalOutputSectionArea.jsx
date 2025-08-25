@@ -1,25 +1,28 @@
-
 import PracticalOutput from "../sections/PracticalOutput";
 
-function PracticalOutputSection( {practicalObjectList, queryIDPractical, practicalEditBtnDisabled} ) {
-
-    
-    return(
-        <>
-        <div className="practicalOutputSection">
+function PracticalOutputSection({
+  practicalObjectList,
+  queryIDPractical,
+  practicalEditBtnDisabled,
+}) {
+  return (
+    <>
+      <div className="practicalOutputSection">
         <h1>PRACTICAL</h1>
         <ul>
-            {practicalObjectList.map((object) => (
-              <li key={object.id} className="practicalListEle" onClick={()=> queryIDPractical(object.id)}>
-                <PracticalOutput formPractical = {object} />
-              </li>  
-            ))}
+          {practicalObjectList.map((object) => (
+            <li
+              key={object.id}
+              className="practicalListEle"
+              onClick={() => queryIDPractical(object.id)}
+            >
+              <PracticalOutput formPractical={object} />
+            </li>
+          ))}
         </ul>
-        </div>
-        </>
-
-
-    )
+      </div>
+    </>
+  );
 }
 
 export default PracticalOutputSection;

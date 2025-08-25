@@ -3,7 +3,14 @@ function TextInput({ labelText, placeHolder, value, name, onChange }) {
     <>
       <div className="inputContainer">
         <label htmlFor="nameInput">{labelText} </label>
-        <input type="text" id="nameInput" name = {name} placeholder={placeHolder} value= {value} onChange = {onChange} />
+        <input
+          type="text"
+          id="nameInput"
+          name={name}
+          placeholder={placeHolder}
+          value={value}
+          onChange={onChange}
+        />
       </div>
     </>
   );

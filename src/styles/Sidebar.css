@@ -1,0 +1,189 @@
+.sideBar {
+  justify-content: center;
+  grid-column: 1/2;
+  margin: 5vh 0vh 5vh 0vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.curriculumList {
+  padding-left: 0;
+}
+
+.curriculumList li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  width: 100%;
+  max-width: 500px;
+  height: clamp(100px, 20vh, 100px);
+  margin: 0.5vh 0vh 2.5vh 3.5vh;
+  padding-top: 2.8vh;
+  padding-left: 18px;
+  list-style-type: none;
+  background-color: var(--color-yellow);
+  font-size: 1.5rem;
+  font-weight: 800;
+  border-radius: 8px;
+  border: 3px solid black;
+  box-shadow: 0.4rem 0.4rem 0 black;
+}
+
+#open.personalLi {
+  height: clamp(380px, 40vh, 370px);
+}
+#open.educationalLi {
+  height: clamp(570px, 56vh, 505px);
+}
+#open.practicalLi {
+  height: clamp(590px, 50vh, 435px);
+}
+
+.arrowDown {
+  position: absolute;
+  left: 88%;
+}
+
+.arrowDown:hover {
+  cursor: pointer;
+  filter: brightness(3); /* 1.0 = normal, 1.2 = 20% heller */
+  transition: filter 0.15s ease; /* smooth effect */
+}
+
+.personFormElement section {
+  height: 100%;
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+  padding-left: 0;
+}
+
+label {
+  min-width: 110px;
+}
+
+input {
+  border-radius: 5px;
+  border: 2px solid rgb(79, 79, 79);
+  font-size: 1.1rem;
+}
+
+textarea {
+  border-radius: 5px;
+  border: 2px solid rgb(79, 79, 79);
+  font-size: 1.1rem;
+  height: 120px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  padding: 0.3vh 0;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-right: 18px;
+  margin-top: 8px;
+}
+
+.saveBtn {
+  display: flex;
+  height: 40px;
+  width: 80px;
+  justify-self: end;
+  align-self: baseline;
+  place-content: center;
+  flex-wrap: wrap;
+  font-size: 1.05rem;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.saveBtn:hover,
+.editBtn:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+.editBtn {
+  display: flex;
+  color: black;
+  height: 40px;
+  width: 80px;
+  justify-self: start;
+  align-self: baseline;
+  place-content: center;
+  flex-wrap: wrap;
+  font-size: 1.05rem;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.btnDisabled {
+  background-color: rgb(213, 211, 211);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnDisabled:hover {
+  background-color: rgb(211, 209, 209);
+  cursor: not-allowed;
+}
+
+@media (max-width: 1155px) {
+  .sideBar {
+    width: 100%;
+    height: auto;
+    margin: 2vh 3vw 3vh 3vw;
+  }
+
+  .curriculumList li {
+    min-width: 90%;
+    list-style-type: none;
+    background-color: var(--color-yellow);
+    padding: clamp(2vh, 2.5vh, 3vh);
+    margin: 0vh 0vw 2.2vh 4vw;
+  }
+
+  .arrowDown {
+    position: absolute;
+    left: 91%;
+  }
+
+  fieldset {
+    border: none;
+    padding-left: 0;
+  }
+  label {
+    min-width: 110px;
+  }
+
+  input {
+    border-radius: 5px;
+    border: 2px solid rgb(79, 79, 79);
+    font-size: 1.1rem;
+  }
+
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    padding: 0.15vh 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .curriculumList li {
+    margin: 0.5vh 0vh 2.5vh 0vh;
+  }
+}

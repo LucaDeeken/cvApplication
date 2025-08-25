@@ -3,7 +3,13 @@ function NumInput({ labelNum, placeHolder, value, onChange }) {
     <>
       <div className="inputContainer">
         <label htmlFor="numInput">{labelNum} </label>
-        <input type="number" id="numberInput" placeholder={placeHolder} value= {value} onChange= {onChange }/>
+        <input
+          type="number"
+          id="numberInput"
+          placeholder={placeHolder}
+          value={value}
+          onChange={onChange}
+        />
       </div>
     </>
   );

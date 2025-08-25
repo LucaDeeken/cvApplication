@@ -1,10 +1,20 @@
-import Icon from '@mdi/react';
-import { mdiDeleteCircleOutline } from '@mdi/js';
-import { mdiEmail } from '@mdi/js';
-import { mdiPhone } from '@mdi/js';
+import Icon from "@mdi/react";
+import { mdiDeleteCircleOutline } from "@mdi/js";
+import { mdiEmail } from "@mdi/js";
+import { mdiPhone } from "@mdi/js";
 
-function PersonalOutput( {fullName,birthDate, mail, mobilNum, setEducationObjectList, setPracticalObjectList, setFullName, setBirthDate, setMail, setMobil}) {
-
+function PersonalOutput({
+  fullName,
+  birthDate,
+  mail,
+  mobilNum,
+  setEducationObjectList,
+  setPracticalObjectList,
+  setFullName,
+  setBirthDate,
+  setMail,
+  setMobil,
+}) {
   function deleteCV() {
     setEducationObjectList([]);
     setPracticalObjectList([]);
@@ -16,29 +26,23 @@ function PersonalOutput( {fullName,birthDate, mail, mobilNum, setEducationObject
 
   return (
     <div className="personalOutput">
-    <Icon
-    path={mdiDeleteCircleOutline}
-    size={1.8}
-    className="deleteIcon"
-    onClick= {() => deleteCV()}
-    />
+      <Icon
+        path={mdiDeleteCircleOutline}
+        size={1.8}
+        className="deleteIcon"
+        onClick={() => deleteCV()}
+      />
       <div className="fullName">{fullName}</div>
       <div className="birthDate">{birthDate}</div>
-      <div className="mailNum">{mail}
-      <Icon
-    path={mdiEmail}
-    size={1}
-    className="telephonIcon"
-    />
+      <div className="mailNum">
+        {mail}
+        <Icon path={mdiEmail} size={1} className="telephonIcon" />
       </div>
-      <div className="telNum">{mobilNum}
-      <Icon
-    path={mdiPhone}
-    size={1}
-    className="phoneIcon"
-    />
+      <div className="telNum">
+        {mobilNum}
+        <Icon path={mdiPhone} size={1} className="phoneIcon" />
       </div>
-      </div>
+    </div>
   );
 }
 

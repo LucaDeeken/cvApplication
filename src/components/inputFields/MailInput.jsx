@@ -3,7 +3,13 @@ function MailInput({ labelMail, placeHolder, value, onChange }) {
     <>
       <div className="inputContainer">
         <label htmlFor="mailInput">{labelMail} </label>
-        <input type="email" id="mailInput" placeholder={placeHolder} value= {value} onChange= {onChange } />
+        <input
+          type="email"
+          id="mailInput"
+          placeholder={placeHolder}
+          value={value}
+          onChange={onChange}
+        />
       </div>
     </>
   );
